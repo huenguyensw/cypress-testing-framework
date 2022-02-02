@@ -1,0 +1,23 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "triggerAllTests-headless": "npx cypress run",
+    "triggerAllTests-headed": "npx cypress run --headed",
+    "triggerAllTests--dashboard": "npx cypress run --record --key da337bf3-e7e6-45e0-a2df-d17790a366ce"
+  },
+  "author": "Hue Nguyen",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.2.1",
+    "evernote": "^2.0.5"
+  },
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false
+  }
+}

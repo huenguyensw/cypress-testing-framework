@@ -1,0 +1,10 @@
+{
+  "baseUrl": "https://evernote.com/",
+  "pageLoadTimeOut": 30000,
+  "defaultCommandTimeout": 60000,
+  "chromeWebSecurity": false,
+  "env": {
+    "Evernote_homepage": "https://evernote.com/"
+  },
+  "projectId": "nkx9ie"
+}
