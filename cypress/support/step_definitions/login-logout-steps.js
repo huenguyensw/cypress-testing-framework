@@ -8,7 +8,9 @@ var userCredentials = {};
 Given("I access the Evernote portal page", () => {
     const homepage_PO = new Homepage_PO();
     homepage_PO.visitHomepage();
-    //cy.get('.modal-close').click();
+    //close advertise dialog if it exists 
+    cy.closeDialogIfExist(".modal-close");
+    
     homepage_PO.clickOn_LogIn_Button();
     cy.fixture('userCredentials').then(data => {
         userCredentials = data;
@@ -67,6 +69,7 @@ Then("I should be logged in successfully", () => {
     cy.get(".mjp8WyYQODySClV2byHt").then(($link) => {
         cy.get($link).should('exist').should('have.text', userCredentials.userName);
     });
+    
 })
 
 Then("I should be logged in unsuccessfully", () => {

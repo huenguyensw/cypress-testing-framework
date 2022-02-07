@@ -11,7 +11,13 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-//
+    Cypress.Commands.add("closeDialogIfExist", element =>{
+            cy.get('body').then((body) =>{
+                if(body.find(element).length > 0) {
+                    cy.get(element).click()
+                }
+            })
+    })
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
