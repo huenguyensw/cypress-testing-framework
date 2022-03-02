@@ -6,6 +6,7 @@
   "scripts": {
     "triggerAllTests-headless": "npx cypress run",
     "triggerAllTests-headed": "npx cypress run --headed",
+    "triggerAllTests-Evernote": "npx cypress run --spec cypress/integration/Evernote/features/login_logout.feature",
     "triggerAllTests--dashboard": "npx cypress run --record --key da337bf3-e7e6-45e0-a2df-d17790a366ce"
   },
   "author": "Hue Nguyen",
